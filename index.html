@@ -14,17 +14,24 @@
             <div>
             <a href="./index.html"><button  class="logo">Flashbacks Music Mixer</button></a>
             </div>
-            <ul>
+            <ul class="nav-bar-items">
                 <li><a href="./contact.html"><button class="right-nav"  >Contact</button></a></li>
                 <li><a href="./about.html"><button class="right-nav" >About</button></a></li>
                 <li><a href="./favorites.html"><button class="right-nav" >Favorites</button></a></li>
+                <form id="myForm">
+                    <input id="searchInput" class="search-input" name="text" placeholder="Enter Artist..." type="search">
+                    <button id="searchButton" onclick="get" placeholder="Search" class="search-button">Search</button>
+                </form>            
             </ul>
         </nav>
         <main>
             <div class="left-box">
                 <div class="heading">Listen to your past</div>
                 <div class="subheading">Generate your custom throwback playlist tailored to you</div>
-                <a href="./start-listening.html"><button class="start-listening">Start Listening</button></a>
+                <a href="./start-listening.html"><button class="start-listening" data-text="Awesome">
+                    <span class="actual-text">&nbsp;Start Listening&nbsp;</span>
+                    <span aria-hidden="true" class="hover-text">&nbsp;Start Listening&nbsp;</span>
+                </button></a>
             </div>
             <div class="main-right-side">
                 <div class="invisible-box">
@@ -33,26 +40,26 @@
                             <img src="rebel-yell-cover.jpeg"></img>
                             <img src="appetite-for-destruct.jpg"></img>
                             <img src="elvis-presley.jpeg"></img>
-                            <img src="licensed_to_Ill.jpeg"></img>
+                            <img src="licensed-to-Ill.jpeg"></img>
                             <img src="exodus.jpeg"></img>
                             <img src="dreams.jpg"></img>
-                            <img src="abbey_road.jpeg"></img>
+                            <img src="abbey-road.jpeg"></img>
                             <img src="goodbye-yellow-brick-road.jpg"></img>
                             <img src="rebel-yell-cover.jpeg"></img>
                             <img src="appetite-for-destruct.jpg"></img>
                             <img src="elvis-presley.jpeg"></img>
-                            <img src="licensed_to_Ill.jpeg"></img>
+                            <img src="licensed-to-Ill.jpeg"></img>
                             <img src="exodus.jpeg"></img>
                             <img src="dreams.jpg"></img>
-                            <img src="abbey_road.jpeg"></img>
+                            <img src="abbey-road.jpeg"></img>
                             <img src="goodbye-yellow-brick-road.jpg"></img>
                             <img src="rebel-yell-cover.jpeg"></img>
                             <img src="appetite-for-destruct.jpg"></img>
                             <img src="elvis-presley.jpeg"></img>
-                            <img src="licensed_to_Ill.jpeg"></img>
+                            <img src="licensed-to-Ill.jpeg"></img>
                             <img src="exodus.jpeg"></img>
                             <img src="dreams.jpg"></img>
-                            <img src="abbey_road.jpeg"></img>
+                            <img src="abbey-road.jpeg"></img>
                             <img src="goodbye-yellow-brick-road.jpg"></img>
                         </div>
                         <p class="right-box-text">More Featured Artists</p>
@@ -61,4 +68,9 @@
             </div>
         </main>
     </body>
+    <script src="./music-app.js/search-artist.js">
+    </script>
+    <script>
+        "index.js"
+    </script>
 </html>

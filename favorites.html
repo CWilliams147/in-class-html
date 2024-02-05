@@ -14,19 +14,25 @@
             <div>
             <a href="./index.html"><button  class="logo">Flashbacks Music Mixer</button></a>
             </div>
-            <ul>
+            <ul class="nav-bar-items">
                 <li><a href="./contact.html"><button class="right-nav"  >Contact</button></a></li>
                 <li><a href="./about.html"><button class="right-nav" >About</button></a></li>
                 <li><a href="./favorites.html"><button class="right-nav" >Favorites</button></a></li>
+                <form id="myForm">
+                    <input id="searchInput" class="search-input" name="text" placeholder="Enter Artist..." type="search">
+                    <button id="searchButton" onclick="get" placeholder="Search" class="search-button">Search</button>
+                </form>            
             </ul>
         </nav>
-        <div class="favorites-box">
-            <div class="favorites-header">Add Your Favorite Artists</div>
-            <input id="input" class="favorites-input" placeholder="Enter Artist Here"/>
-            <button id="add-favorites" class="add-favorites">Click to Add</button>
-            <div class="favorites">
-        </div>
-            <script src="./index.js"></script>
+            <div class="favorites-box">
+                <div class="favorites-header">Add Your Favorite Artists</div>
+                <input id="input" class="favorites-input" placeholder="Enter Artist Here"/>
+                <button id="add-favorites" class="add-favorites">Click to Add</button>
+        <div class="favorites">
+            </div>
+            <script src="./music-app.js/index.js"></script>
         </div>
     </body>
+    <script src="./music-app.js/search-artist.js">
+    </script>
 </html>

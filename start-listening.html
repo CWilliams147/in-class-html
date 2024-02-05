@@ -14,10 +14,14 @@
             <div>
             <a href="./index.html"><button  class="logo">Flashbacks Music Mixer</button></a>
             </div>
-            <ul>
+            <ul class="nav-bar-items">
                 <li><a href="./contact.html"><button class="right-nav"  >Contact</button></a></li>
                 <li><a href="./about.html"><button class="right-nav" >About</button></a></li>
                 <li><a href="./favorites.html"><button class="right-nav" >Favorites</button></a></li>
+                <form id="myForm">
+                    <input id="searchInput" class="search-input" name="text" placeholder="Enter Artist..." type="search">
+                    <button id="searchButton" onclick="get" placeholder="Search" class="search-button">Search</button>
+                </form>            
             </ul>
         </nav>   
         <main>
@@ -27,4 +31,6 @@
             </div>
         </main> 
     </body>
+    <script src="./music-app.js/search-artist.js">
+    </script>
 </html>

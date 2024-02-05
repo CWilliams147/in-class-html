@@ -22,13 +22,91 @@ button {
     margin-right: 30px;
 }
 
+.nav-bar-items {
+    display: flex;
+    align-items: center;
+}
 
 .right-nav:hover {
     text-decoration: underline;
 }
 
+.search-input {
+    width: 200px;
+    background-color: #f5f5f5;
+    color: #242424;
+    padding-left: 15px;
+    margin-right: 5px;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+}
+  
+search-input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+}
+  
+search-input:hover {
+    outline: 1px solid lightgrey;
+}
+
+.search-button {
+    width: 175px;
+    height: 50px;
+    margin: 0.5em;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
 .start-listening {
-    width: 20vw;
+    width: 30vw;
+    height: 50px;
+    border: white;
+    margin-top: 20px;
+    height: 40px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #08c557;
+    --fs-size: 2em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: "Rubik";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+  /* hover */
+.start-listening:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
 }
 
 .logo {
@@ -53,6 +131,9 @@ nav button {
     border: 1px;
     color: white;
 }
+
+/* =========================================================== */
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -139,7 +220,7 @@ img {
     animation: albumScroll 60s linear infinite;
 }
 
-
+/* =========================================================== */
 
 .about-text-box {
     width: 100%;
@@ -179,15 +260,17 @@ img {
     text-align: center;
 }
 
+/* =========================================================== */
+
+
 .contact-box {
     border-radius: 25px;
     background: #2d2d2dcb;
-    width: 1500px;
-    height: 75%;
+    width: 70vw;
+    height: 40vw;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     margin-bottom: 75px;
+    justify-content: center;
 }
 
 .contact-heading {
@@ -195,9 +278,128 @@ img {
     display: flex;
     align-items: center;
     font-size: 60px;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 30px;
-}
+} 
+
+.form-container {
+    width: 500px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 72px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width:300px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  
+  .form-container .form-group input {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 16px 18px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+  
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #e81cff;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+/* =========================================================== */
 
 .favorites-box {
     display: flex;
@@ -243,6 +445,28 @@ img {
     color:white;
     font-size: 20px;
 }
+
+.favorites {
+    display: flex;
+    background-color: #ffffff;
+    width: 30vw;
+    height: 25vw;
+    border-radius: 15px;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.favorite-item {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+}
+
+/* =========================================================== */
 
 @keyframes albumScroll {
     0% {
