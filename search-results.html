@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Flashback Music Mixer</title>
-</head>
-    <body>
-        <nav>
-            <div>
-            <a href="./index.html"><button  class="logo">Flashbacks Music Mixer</button></a>
-            </div>
-            <ul class="nav-bar-items">
-                <li><a href="./contact.html"><button class="right-nav"  >Contact</button></a></li>
-                <li><a href="./about.html"><button class="right-nav" >About</button></a></li>
-                <li><a href="./favorites.html"><button class="right-nav" >Favorites</button></a></li>
-                <form id="myForm">
-                    <input id="searchInput" class="search-input" name="text" placeholder="Enter Artist..." type="search">
-                    <button id="searchButton" onclick="get" placeholder="Search" class="search-button">Search</button>
-                </form>
-            </ul>
-        </nav>
-        <main>    
-            <div class="about-text-summary">
-                <div id="topSongsContainer"></div>
-            </div>
-        </div>
-    </div>
-    <script src="./music-app.js/search-results.js"></script>
-</main>
-</body>
-<script src="./music-app.js/search-artist.js">
-</script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="./index.html"
+          ><button class="logo">Flashbacks Music Mixer</button></a
+        >
+      </div>
+      <ul class="nav-bar-items">
+        <li>
+          <a href="./contact.html"
+            ><button class="right-nav">Contact</button></a
+          >
+        </li>
+        <li>
+          <a href="./about.html"><button class="right-nav">About</button></a>
+        </li>
+        <li>
+          <a href="./favorites.html"
+            ><button class="right-nav">Favorites</button></a
+          >
+        </li>
+        <form id="myForm">
+          <input
+            id="searchInput"
+            class="search-input"
+            name="text"
+            placeholder="Enter Artist..."
+            type="search"
+          />
+          <button
+            id="searchButton"
+            onclick="get"
+            placeholder="Search"
+            class="search-button"
+          >
+            Search
+          </button>
+        </form>
+      </ul>
+    </nav>
+    <main id="search-results-main">
+      <div class="search-results-container">
+        <div id="topSongsContainer" class="search-results-artistName"></div>
+        <div id="artistReleases" class="search-results-artistReleases"></div>
+      </div>
+
+      <script src="./music-app.js/search-results.js"></script>
+    </main>
+  </body>
+  <script src="./music-app.js/search-artist.js"></script>
 </html>
